@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100b20">
+  <title>MIGO AI • TikTok LIVE</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="orb">🤖</div>
+      <div>
+        <p class="eyebrow">ASSISTENTE DE LIVE</p>
+        <h1>MIGO <span>AI</span></h1>
+        <p class="sub">Sua IA para acompanhar o chat e reagir aos presentes.</p>
+      </div>
+    </header>
+
+    <section class="panel connection">
+      <label for="username">Usuário do TikTok que está AO VIVO</label>
+      <div class="connect-row">
+        <input id="username" placeholder="@seuusuario" maxlength="50" autocomplete="off">
+        <button id="connect">Conectar</button>
+      </div>
+      <div class="status-line"><span id="dot" class="dot"></span><span id="status">Desconectado</span></div>
+      <p id="error" class="error"></p>
+      <p class="hint">Use seu @ público, sem senha. A transmissão precisa estar ao vivo. Não coloque sua senha do TikTok aqui.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>💬</span><strong id="comments">0</strong><small>comentários</small></div>
+      <div class="stat"><span>🎁</span><strong id="gifts">0</strong><small>presentes</small></div>
+      <div class="stat"><span>🤖</span><strong id="replies">0</strong><small>respostas da IA</small></div>
+    </section>
+
+    <section class="panel">
+      <div class="feed-head"><h2>Feed da LIVE</h2><label class="toggle"><input id="voice" type="checkbox" checked> Ler reações em voz alta</label></div>
+      <div id="feed" class="feed">
+        <div class="empty" id="empty">Conecte sua LIVE para ver os comentários e presentes aqui.</div>
+      </div>
+    </section>
+    <p class="disclaimer">Protótipo comunitário não oficial. Ele lê eventos da LIVE e mostra/fala as respostas no painel; não publica mensagens automaticamente no chat do TikTok. A conexão pode parar se o TikTok mudar o sistema.</p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
